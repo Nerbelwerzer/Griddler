@@ -78,15 +78,19 @@ $colours: (
   "purple": #882688
 );
 
-@each $colour, $value in $colours {
-    .bg-#{$colour} {
-        background-color: $value !important;
-    }
+// Background/font colours
 
-    .text-#{$colour} {
-        background-color: $value !important;
-    }
+@each $colour, $value in $colours {
+  .bg-#{$colour} {
+    background-color: $value !important;
+  }
+
+  .text-#{$colour} {
+    background-color: $value !important;
+  }
 }
+
+//Buttons
 
 @each $colour, $value in $colours {
   .btn-#{$colour} {
@@ -111,6 +115,8 @@ $colours: (
 
 }
 
+// Columns
+
 @for $i from 1 through $cols {
 	$p: percentage($i / $cols);
 
@@ -120,6 +126,8 @@ $colours: (
 	}
 }
 
+// Padding
+
 @each $posname, $pos in $positions {
 	@each $name, $size in $padding {
 		.p#{$posname}-#{$name} {
@@ -127,6 +135,8 @@ $colours: (
 		}
 	}
 }
+
+//Margins
 
 @each $posname, $pos in $positions {
 	@each $name, $size in $padding {
@@ -229,6 +239,7 @@ $colours: (
 /* small screen */
 
 @media (max-width: 720px) {
+
 	@for $i from 1 through $cols {
 		$p: percentage($i / $cols);
 
@@ -244,14 +255,14 @@ $colours: (
 				padding#{$pos}: $size !important;
 			}
 		}
-    }
+  }
     
-    @each $posname, $pos in $positions {
-        @each $name, $size in $padding {
-            .m#{$posname}-s-#{$name} {
-                margin#{$pos}: $size !important;
-            }
+  @each $posname, $pos in $positions {
+      @each $name, $size in $padding {
+        .m#{$posname}-s-#{$name} {
+            margin#{$pos}: $size !important;
         }
+      }
     }
     
 
@@ -308,14 +319,14 @@ $colours: (
 				padding#{$pos}: $size !important;
 			}
 		}
-    }
+  }
     
     @each $posname, $pos in $positions {
-        @each $name, $size in $padding {
-            .m#{$posname}-m-#{$name} {
-                margin#{$pos}: $size !important;
-            }
+      @each $name, $size in $padding {
+        .m#{$posname}-m-#{$name} {
+          margin#{$pos}: $size !important;
         }
+      }
     }
     
 
@@ -359,6 +370,7 @@ $colours: (
 /* large screen */
 
 @media (min-width: 990px) {
+
 	@for $i from 1 through $cols {
 		$p: percentage($i / $cols);
 
@@ -366,7 +378,7 @@ $colours: (
 			width: $p;
 			flex-basis: $p;
 		}
-	}
+  }
 
 	@each $posname, $pos in $positions {
 		@each $name, $size in $padding {
@@ -374,14 +386,14 @@ $colours: (
 				padding#{$pos}: $size !important;
 			}
 		}
-    }
-    
+  }
+
     @each $posname, $pos in $positions {
-        @each $name, $size in $padding {
-            .m#{$posname}-l-#{$name} {
-                margin#{$pos}: $size !important;
-            }
+      @each $name, $size in $padding {
+        .m#{$posname}-l-#{$name} {
+          margin#{$pos}: $size !important;
         }
+      }
     }
     
 
