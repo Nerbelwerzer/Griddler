@@ -112,7 +112,6 @@ $colours: (
   .btn-#{$colour}:hover {
     background-color: darken($value, 15%);
   }
-
 }
 
 // Columns
@@ -159,7 +158,6 @@ $colours: (
     align-content: #{$attr};
   }
 }
-
 
 .container {
   max-width: 1310px;
@@ -256,12 +254,12 @@ $colours: (
   }
     
   @each $posname, $pos in $positions {
-      @each $name, $size in $padding {
-        .m#{$posname}-s-#{$name} {
-            margin#{$pos}: $size !important;
-        }
+    @each $name, $size in $padding {
+      .m#{$posname}-s-#{$name} {
+         margin#{$pos}: $size !important;
       }
     }
+  }
     
 
   @each $name, $attr in $spacing {
@@ -298,7 +296,6 @@ $colours: (
 }
 
 
-
 /* Medium screen */
 
 @media (min-width: 721px) {
@@ -319,13 +316,13 @@ $colours: (
     }
   }
     
-    @each $posname, $pos in $positions {
-      @each $name, $size in $padding {
-        .m#{$posname}-m-#{$name} {
-          margin#{$pos}: $size !important;
-        }
+  @each $posname, $pos in $positions {
+    @each $name, $size in $padding {
+      .m#{$posname}-m-#{$name} {
+        margin#{$pos}: $size !important;
       }
     }
+  }
     
 
   @each $name, $attr in $spacing {
@@ -362,9 +359,6 @@ $colours: (
 }
 
 
-
-
-
 /* large screen */
 
 @media (min-width: 990px) {
@@ -386,13 +380,13 @@ $colours: (
     }
   }
 
-    @each $posname, $pos in $positions {
-      @each $name, $size in $padding {
-        .m#{$posname}-l-#{$name} {
-          margin#{$pos}: $size !important;
-        }
+  @each $posname, $pos in $positions {
+    @each $name, $size in $padding {
+      .m#{$posname}-l-#{$name} {
+        margin#{$pos}: $size !important;
       }
     }
+  }
     
 
   @each $name, $attr in $spacing {
