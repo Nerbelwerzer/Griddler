@@ -18,40 +18,40 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
-	font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
   }
   
 
@@ -118,143 +118,141 @@ $colours: (
 // Columns
 
 @for $i from 1 through $cols {
-	$p: percentage($i / $cols);
+  $p: percentage($i / $cols);
 
-	.col-#{$i} {
-		width: $p;
-		flex-basis: $p;
-	}
+  .col-#{$i} {
+    width: $p;
+    flex-basis: $p;
+  }
 }
 
 // Padding
 
 @each $posname, $pos in $positions {
-	@each $name, $size in $padding {
-		.p#{$posname}-#{$name} {
-			padding#{$pos}: $size !important;
-		}
-	}
+  @each $name, $size in $padding {
+    .p#{$posname}-#{$name} {
+      padding#{$pos}: $size !important;
+    }
+  }
 }
 
 //Margins
 
 @each $posname, $pos in $positions {
-	@each $name, $size in $padding {
-		.m#{$posname}-#{$name} {
-			margin#{$pos}: $size !important;
-		}
-	}
+  @each $name, $size in $padding {
+    .m#{$posname}-#{$name} {
+      margin#{$pos}: $size !important;
+    }
+  }
 }
 
 
 @each $name, $attr in $spacing {
-	.justify-#{$name} {
-		justify-content: #{$attr};
-	}
-	.align-#{$name} {
-		align-items: #{$attr};
-	}
+  .justify-#{$name} {
+    justify-content: #{$attr};
+  }
+  .align-#{$name} {
+    align-items: #{$attr};
+  }
 
-	.align-content-#{$name} {
-		align-content: #{$attr};
-	}
+  .align-content-#{$name} {
+    align-content: #{$attr};
+  }
 }
 
 
 .container {
-	max-width: 1310px;
-	margin: 0 auto;
+  max-width: 1310px;
+  margin: 0 auto;
 }
 
 .container-full {
-	width: 100%;
+  width: 100%;
 }
 
 .row {
-	display: flex;;
-	flex-wrap: wrap;
-	margin-left: -12px;
-	margin-right: -12px;
+  display: flex;;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 .row > * {
-	padding-left: 12px;
-	padding-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .d-flex {
-	display: flex;
+  display: flex;
 }
 
 .d-flex-col {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrap {
-	flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .no-wrap {
-	flex-wrap: none;
+  flex-wrap: none;
 }
 
 .d-none {
-	display: none;
+  display: none;
 }
 
 .d-rel {
-	display: relative;
+  display: relative;
 }
 
 .d-absolute {
-	display: absolute;
+  display: absolute;
 }
 
 .d-block {
-	display: block;
+  display: block;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .float-l {
-	float: left;
+  float: left;
 }
 
 .float-r {
-	float: right;
+  float: right;
 }
 
 .sticky-top {
-	position: sticky;
-	top: 0;
-	z-index: 3;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
-  
-
 
 
 /* small screen */
 
 @media (max-width: 720px) {
 
-	@for $i from 1 through $cols {
-		$p: percentage($i / $cols);
+  @for $i from 1 through $cols {
+    $p: percentage($i / $cols);
 
-		.col-s-#{$i} {
-			width: $p;
-			flex-basis: $p;
-		}
-	}
+    .col-s-#{$i} {
+      width: $p;
+      flex-basis: $p;
+    }
+  }
 
-	@each $posname, $pos in $positions {
-		@each $name, $size in $padding {
-			.p#{$posname}-s-#{$name} {
-				padding#{$pos}: $size !important;
-			}
-		}
+  @each $posname, $pos in $positions {
+    @each $name, $size in $padding {
+      .p#{$posname}-s-#{$name} {
+        padding#{$pos}: $size !important;
+      }
+    }
   }
     
   @each $posname, $pos in $positions {
@@ -266,37 +264,37 @@ $colours: (
     }
     
 
-	@each $name, $attr in $spacing {
-		.justify-#{$name}-s {
-			justify-content: #{$attr};
-		}
-		.align-#{$name}-s {
-			align-items: #{$attr};
-		}
-	
-		.align-content-#{$name}-s {
-			align-content: #{$attr};
-		}
-	}
+  @each $name, $attr in $spacing {
+    .justify-#{$name}-s {
+      justify-content: #{$attr};
+    }
+    .align-#{$name}-s {
+      align-items: #{$attr};
+    }
+  
+    .align-content-#{$name}-s {
+      align-content: #{$attr};
+    }
+  }
 
-	.d-flex-s {
-		display: flex;
-	}
+  .d-flex-s {
+    display: flex;
+  }
 
-	.d-flex-col-s {
-		display: flex;
-		flex-direction: column;
-	}
+  .d-flex-col-s {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.d-none-s {
-		display: none;
-	}
+  .d-none-s {
+    display: none;
+  }
 
-	.sticky-top-s {
-		position: sticky;
-		top: 0;
-		z-index: 3;
-	}
+  .sticky-top-s {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
 }
 
 
@@ -304,21 +302,21 @@ $colours: (
 /* Medium screen */
 
 @media (min-width: 721px) {
-	@for $i from 1 through $cols {
-		$p: percentage($i / $cols);
+  @for $i from 1 through $cols {
+    $p: percentage($i / $cols);
 
-		.col-m-#{$i} {
-			width: $p;
-			flex-basis: $p;
-		}
-	}
+    .col-m-#{$i} {
+      width: $p;
+      flex-basis: $p;
+    }
+  }
 
-	@each $posname, $pos in $positions {
-		@each $name, $size in $padding {
-			.p#{$posname}-m-#{$name} {
-				padding#{$pos}: $size !important;
-			}
-		}
+  @each $posname, $pos in $positions {
+    @each $name, $size in $padding {
+      .p#{$posname}-m-#{$name} {
+        padding#{$pos}: $size !important;
+      }
+    }
   }
     
     @each $posname, $pos in $positions {
@@ -330,37 +328,37 @@ $colours: (
     }
     
 
-	@each $name, $attr in $spacing {
-		.justify-#{$name}-m {
-			justify-content: #{$attr};
-		}
-		.align-#{$name}-m {
-			align-items: #{$attr};
-		}
-	
-		.align-content-#{$name}-m {
-			align-content: #{$attr};
-		}
-	}
+  @each $name, $attr in $spacing {
+    .justify-#{$name}-m {
+      justify-content: #{$attr};
+    }
+    .align-#{$name}-m {
+      align-items: #{$attr};
+    }
+  
+    .align-content-#{$name}-m {
+      align-content: #{$attr};
+    }
+  }
 
-	.d-flex-m {
-		display: flex;
-	}
+  .d-flex-m {
+    display: flex;
+  }
 
-	.d-flex-col-m {
-		display: flex;
-		flex-direction: column;
-	}
+  .d-flex-col-m {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.d-none-m {
-		display: none;
-	}
+  .d-none-m {
+    display: none;
+  }
 
-	.sticky-top-m {
-		position: sticky;
-		top: 0;
-		z-index: 3;
-	}
+  .sticky-top-m {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
 }
 
 
@@ -371,21 +369,21 @@ $colours: (
 
 @media (min-width: 990px) {
 
-	@for $i from 1 through $cols {
-		$p: percentage($i / $cols);
+  @for $i from 1 through $cols {
+    $p: percentage($i / $cols);
 
-		.col-l-#{$i} {
-			width: $p;
-			flex-basis: $p;
-		}
+    .col-l-#{$i} {
+      width: $p;
+      flex-basis: $p;
+    }
   }
 
-	@each $posname, $pos in $positions {
-		@each $name, $size in $padding {
-			.p#{$posname}-l-#{$name} {
-				padding#{$pos}: $size !important;
-			}
-		}
+  @each $posname, $pos in $positions {
+    @each $name, $size in $padding {
+      .p#{$posname}-l-#{$name} {
+        padding#{$pos}: $size !important;
+      }
+    }
   }
 
     @each $posname, $pos in $positions {
@@ -397,37 +395,37 @@ $colours: (
     }
     
 
-	@each $name, $attr in $spacing {
-		.justify-#{$name}-l {
-			justify-content: #{$attr};
-		}
-		.align-#{$name}-l {
-			align-items: #{$attr};
-		}
-	
-		.align-content-#{$name}-l {
-			align-content: #{$attr};
-		}
-	}
+  @each $name, $attr in $spacing {
+    .justify-#{$name}-l {
+      justify-content: #{$attr};
+    }
+    .align-#{$name}-l {
+      align-items: #{$attr};
+    }
+  
+    .align-content-#{$name}-l {
+      align-content: #{$attr};
+    }
+  }
 
-	.d-flex-l {
-		display: flex;
-	}
+  .d-flex-l {
+    display: flex;
+  }
 
-	.d-flex-col-l {
-		display: flex;
-		flex-direction: column;
-	}
+  .d-flex-col-l {
+    display: flex;
+    flex-direction: column;
+  }
 
-	.d-none-l {
-		display: none;
-	}
+  .d-none-l {
+    display: none;
+  }
 
-	.sticky-top-l {
-		position: sticky;
-		top: 0;
-		z-index: 3;
-	}
+  .sticky-top-l {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
 
 }
 
