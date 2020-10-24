@@ -54,16 +54,20 @@ table {
   box-sizing: border-box;
   }
   
+/*
+GRIDDLER
+V1.0 | 2020
+*/
 
 $cols: 12;
 
-/* padding/margin positions */
+// padding/margin positions //
 $positions: "" "", "t" "-top", "r" "-right", "b" "-bottom", "l" "-left";
 
-/* padding/margin values */
+// padding/margin values //
 $padding: "0" 0, "1" .25rem, "2" .5rem, "3" 1rem, "4" 1.5rem, "5" 3rem;
 
-/* spacings for flex containers */
+// spacings for flex containers //
 $spacing: "center" "center", "evenly" "space-evenly", "around" "space-around", "between" "space-between", "end" "flex-end";
 
 $colours: ( 
